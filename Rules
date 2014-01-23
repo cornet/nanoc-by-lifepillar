@@ -73,7 +73,7 @@ compile '/blog' do # Matches /blog/index.erb
   filter :erb
   layout 'blog/default'
   layout 'default'
-  #filter :relativize_paths, :type => :html
+  filter :relativize_paths, :type => :html
 end
 
 route '/blog' do # Matches /blog/index.erb
@@ -83,7 +83,7 @@ end
 # Blog feed
 compile '/blog/feed' do # Matches /blog/feed.erb
   filter :erb
-  #filter :relativize_paths, :type => :html
+  filter :relativize_paths, :type => :html
 end
 
 route '/blog/feed' do # Matches /blog/feed.erb
@@ -95,7 +95,7 @@ compile '/blog/tags/*' do
   filter :erb
   layout 'blog/default'
   layout 'default'
-  #filter :relativize_paths, :type => :html
+  filter :relativize_paths, :type => :html
 end
 
 route '/blog/tags/*' do
@@ -107,7 +107,7 @@ compile '/blog/archives/*' do
   filter :erb
   layout 'blog/default'
   layout 'default'
-  #filter :relativize_paths, :type => :html
+  filter :relativize_paths, :type => :html
 end
 
 route '/blog/archives/*' do
@@ -133,7 +133,7 @@ compile '/blog/posts/*' do
   layout 'blog/article'
   layout 'blog/default'
   layout 'default'
-  #filter :relativize_paths, :type => :html
+  filter :relativize_paths, :type => :html
 end
 
 route '/blog/posts/*' do
@@ -174,7 +174,7 @@ compile '*' do
   else
     filter :erb
     layout 'default'
-    #filter :relativize_paths, :type => :html
+    filter :relativize_paths, :type => :html
   end
 end
 
